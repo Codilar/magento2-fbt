@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Codilar_Afbt extension
+ * NOTICE OF LICENSE
+ *
+ *
+ * @category  Codilar
+ * @package   Codilar_Afbt
+ * @copyright Copyright (c) 2019
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Codilar_Afbt::codilar"
+             title="Frequently Bought Together"
+             translate="title"
+             module="Codilar_Afbt"
+             parent="Codilar_Core::codilar"
+             sortOrder="10"
+             resource="Codilar_Afbt::report"
+        />
+        <add id="Codilar_Afbt::report"
+             title="Analytics Report"
+             module="Codilar_Afbt"
+             parent="Codilar_Afbt::codilar"
+             sortOrder="20"
+             resource="Codilar_Afbt::report"
+             action="afbt/report/fetch"/>
+    </menu>
+</config>

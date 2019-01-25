@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Codilar_Afbt extension
+ * NOTICE OF LICENSE
+ *
+ *
+ * @category  Codilar
+ * @package   Codilar_Afbt
+ * @copyright Copyright (c) 2019
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="codilar_afbt" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Advanced FBT</label>
+            <tab>codilar</tab>
+            <resource>Codilar_Afbt::afbt</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Frequently Bought Together</label>
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enable Module</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="no_of_combo" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>No. of Combos to Show</label>
+                    <validate>required-entry validate-number</validate>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                    <comment><![CDATA[Maximum 5]]></comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

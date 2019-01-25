@@ -1,0 +1,188 @@
+<!--
+/**
+ * Codilar_Afbt extension
+ * NOTICE OF LICENSE
+ *
+ *
+ * @category  Codilar
+ * @package   Codilar_Afbt
+ * @copyright Copyright (c) 2019
+ */
+-->
+.block-container-flex{
+    display: flex;
+}
+.block-container-flex .anchor-block{
+    display: block;
+    text-decoration: none;
+    color: #000000;
+}
+.block-container-flex .additional-product{
+    display: flex;
+    align-items: center;
+    font-size: 36px;
+    padding-bottom: 20%;
+    justify-content: center;
+}
+.row-mod-block{
+    margin: 0px 10px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+.cart-block .action.primary{
+    width: 100%;
+}
+.fbt-container{
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+.block-container .product-name{
+    display: block;
+    display: -webkit-box;
+    max-width: 100%;
+    height: 39.2px;
+    margin: 10px auto 5px;
+    font-size: 14px;
+    line-height: 1.4;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-decoration: none;
+    color: #000000;
+}
+.price-block .item-price{
+    margin-top: 1rem;
+    font-weight: 600;
+}
+.grant-total{
+    margin-top: 0px;
+}
+.grant-total .price{
+    font-size: 16px;
+    font-weight: 600;
+}
+.fbt-container .owl-item .column-item{
+    border-right: 1px solid #ccc;
+}
+.fbt-container .owl-item.lastActiveItem .column-item{
+    border-right: none;
+}
+.row-fbt:after{
+    display: table;
+    content: '';
+    clear: both;
+}
+.column-2{
+    width: 48%;
+    float: left;
+}
+.additional-product{
+    width: 4%;
+    float: left;
+    text-align: center;
+}
+.fbt-image-container{
+    display: block;
+    height: 0;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    padding-top: 125%
+}
+.fbt-image-container img{
+    bottom: 0;
+    display: block;
+    height: auto;
+    left: 0;
+    margin: auto;
+    max-width: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.block-container .pad-block{
+    padding: 10px;
+}
+.column-item{
+    width: 100%;
+    float: left;
+    border-right: 1px solid #ccc;
+    margin-bottom: 30px;
+}
+@media screen and (max-width: 600px){
+    .fbt-container .owl-item .column-item{
+        border-right: none;
+    }
+}
+.owl-carousel .owl-nav .owl-prev{
+    left:0;
+    position: absolute;
+    top: 40%;
+    transform: translateX(-40%);
+    left: 15px;
+}
+.owl-carousel .owl-nav .owl-next{
+    right:0;
+    position: absolute;
+    top: 40%;
+    transform: translateX(-40%);
+    right: -10px;
+}
+.owl-carousel .owl-nav .owl-next .right-arrow,
+.owl-carousel .owl-nav .owl-prev .left-arrow{
+    width: 30px;
+    height: 30px;
+    background: #eee;
+}
+.owl-carousel .owl-nav .owl-prev .left-arrow:after{
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 14px;
+    line-height: inherit;
+    color: inherit;
+    content: '\e622';
+    font-family: 'luma-icons';
+    vertical-align: middle;
+    display: inline-block;
+    font-weight: normal;
+    overflow: hidden;
+    speak: none;
+    text-align: center;
+    z-index: 2;
+    position: absolute;
+    left: 7px;
+    top: 4px;
+    transform: rotate(90deg);
+}
+.owl-carousel .owl-nav .owl-next .right-arrow:after{
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 14px;
+    line-height: inherit;
+    color: inherit;
+    content: '\e622';
+    font-family: 'luma-icons';
+    vertical-align: middle;
+    display: inline-block;
+    font-weight: normal;
+    overflow: hidden;
+    speak: none;
+    text-align: center;
+    z-index: 2;
+    position: absolute;
+    left: 7px;
+    top: 4px;
+    transform: rotate(-90deg);
+}
+.loader-block{
+    text-align: center;
+    min-height: 260px;
+    position: relative;
+}
+.loader-block img{
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+}

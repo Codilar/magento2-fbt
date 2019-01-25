@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Codilar_Afbt extension
+ * NOTICE OF LICENSE
+ *
+ *
+ * @category  Codilar
+ * @package   Codilar_Afbt
+ * @copyright Copyright (c) 2019
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+    <router id="standard">
+        <route id="afbt" frontName="afbt">
+            <module name="Codilar_Afbt"/>
+        </route>
+    </router>
+</config>

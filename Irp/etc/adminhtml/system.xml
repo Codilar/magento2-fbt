@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Codilar_Irp extension
+ * NOTICE OF LICENSE
+ *
+ *
+ * @category  Codilar
+ * @package   Codilar_Afbt
+ * @copyright Copyright (c) 2019
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="codilar_irp" translate="label" type="text" sortOrder="110" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Intelligent Related Products</label>
+            <tab>codilar</tab>
+            <resource>Codilar_Irp::afbt</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Intelligent Related Products</label>
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enable Module</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="no_of_products" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>No. of Products to Show</label>
+                    <validate>required-entry validate-number</validate>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                    <comment><![CDATA[Maximum 10]]></comment>
+                </field>
+                <field id="allowed_attributes" translate="label" type="multiselect" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Allowed Attributes</label>
+                    <source_model>Codilar\Irp\Model\Source\ProductAttributes</source_model>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                    <comment><![CDATA[Selected attributes will be used in the algorithm to find related products]]></comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

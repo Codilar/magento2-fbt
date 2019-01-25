@@ -1,0 +1,34 @@
+<?php
+/**
+ * @package     M2FBT
+ * @author      Codilar Technologies
+ * @license     https://opensource.org/licenses/OSL-3.0 Open Software License v. 3.0 (OSL-3.0)
+ * @link        http://www.codilar.com/
+ */
+
+/** @var $block \Codilar\Afbt\Block\AfbtHandler */
+$product = $block->getProduct();
+?>
+
+<?php if ($block->isEnabled()): ?>
+    <?php if ($product->getTypeId() != "configurable"): ?>
+    <div class="afbt-container">
+        <div class="loader-block">
+            <img src="<?= /* @escapeNotVerified */ $block->getViewFileUrl('images/loader-1.gif') ?>"
+                 alt="<?= /* @escapeNotVerified */ __('Loading...') ?>">
+        </div>
+    </div>
+    <script type="text/x-magento-init">
+        {
+            "*": {
+                "afbtHandler": {
+                    "afbtFetchUrl": "<?php echo $block->getFetchUrl() ?>",
+                    "product_id": "<?php echo $block->getProduct()->getId() ?>",
+                    "addToCartUrl": "<?php echo $block->getCartAddUrl() ?>",
+                    "form_key": "<?php echo $block->getFormKey() ?>"
+                }
+            }
+        }
+    </script>
+    <?php endif; ?>
+<?php endif; ?>

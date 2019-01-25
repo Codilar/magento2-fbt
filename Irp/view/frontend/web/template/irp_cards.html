@@ -1,0 +1,41 @@
+<!--
+/**
+ * Codilar_Irp extension
+ * NOTICE OF LICENSE
+ *
+ *
+ * @category  Codilar
+ * @package   Codilar_Afbt
+ * @copyright Copyright (c) 2019
+ */
+-->
+<div class="related-block">
+    <h2>Related Products</h2>
+    <div class="fbt-container">
+        <div class="row-fbt related-block-container owl-carousel owl-theme" id="related-carousel-blog">
+            <% productsData.forEach(function(product) { %>
+                <div class="column-item">
+                    <div class="row-fbt container-flex-container">
+                        <div class="row-fbt block-container-flex">
+                            <div class="block-container">
+                                <div class="pad-block">
+                                    <div class="fbt-image-container">
+                                        <a href="<%= product.url %>" title="<%= product.name %>">
+                                            <img src="<%= product.image %>">
+                                        </a>
+                                    </div>
+                                    <a class="product-name" href="<%= product.url %>" title="<%= product.name %>">
+                                        <%= product.name %>
+                                    </a>
+                                    <div class="price-block">
+                                        <%= product.price_html %>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <% }); %>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+.config-nav-block.codilar-tab strong:before {
+    background: url(../images/codilar_logo_black.png) no-repeat;
+    width: 20px;
+    height: 20px;
+    content: '';
+    display: inline-block;
+    margin-right: 6px;
+    vertical-align: bottom;
+}
+
+.admin__menu .level-0.item-codilar > a:before {
+    content: url(../images/codilar_logo_white.png) !important;
+}

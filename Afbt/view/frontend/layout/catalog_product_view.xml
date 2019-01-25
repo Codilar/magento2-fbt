@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Codilar_Afbt extension
+ * NOTICE OF LICENSE
+ *
+ *
+ * @category  Codilar
+ * @package   Codilar_Afbt
+ * @copyright Copyright (c) 2019
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <block class="Codilar\Afbt\Block\AfbtHandler" name="codilar_afbt_handler_block" template="Codilar_Afbt::afbt_handler.phtml" />
+        </referenceContainer>
+    </body>
+</page>

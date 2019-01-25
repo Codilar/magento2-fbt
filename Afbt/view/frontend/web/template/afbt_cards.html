@@ -1,0 +1,77 @@
+<!--
+/**
+ * Codilar_Afbt extension
+ * NOTICE OF LICENSE
+ *
+ *
+ * @category  Codilar
+ * @package   Codilar_Afbt
+ * @copyright Copyright (c) 2019
+ */
+-->
+<% if (productsData.status) { %>
+    <h2 id="scroll-to">Frequently Bought Together</h2>
+    <div class="fbt-container">
+        <div class="row-fbt owl-carousel owl-theme" id="fbt-carousel-blog">
+            <% productsData.associated_products.forEach(function(associatedProduct) { %>
+                <div class="column-item">
+                <div class="row-fbt container-flex-container">
+                    <div class="row-fbt block-container-flex">
+                        <div class="block-container column-2">
+                            <div class="pad-block">
+                                <div class="fbt-image-container">
+                                    <a href="<%= productsData.parent_product.url %>" title="<%= productsData.parent_product.name %>">
+                                        <img src="<%= productsData.parent_product.image %>">
+                                    </a>
+                                </div>
+                                <a class="product-name" href="<%= productsData.parent_product.url %>" title="<%= productsData.parent_product.name %>">
+                                    <%= productsData.parent_product.name %>
+                                </a>
+                                <div class="price-block">
+                                    <%= productsData.parent_product.price_html %>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="additional-product">+</span>
+                        <div class="block-container column-2">
+                            <div class="pad-block">
+                                <div class="fbt-image-container">
+                                    <a href="<%= associatedProduct.url %>" title="<%= associatedProduct.name %>">
+                                        <img src="<%= associatedProduct.image %>" />
+                                    </a>
+                                </div>
+                                <a class="product-name" href="<%= associatedProduct.url %>" title="<%= associatedProduct.name %>">
+                                    <%= associatedProduct.name %>
+                                </a>
+                                <div class="price-block">
+                                    <%= associatedProduct.price_html %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row-fbt row-mod-block">
+                        <div class="block-container column-2">
+                            <div class="grant-total">
+                                <label>Combo Price</label>
+                                <p class="price"><%= associatedProduct.total_price %></p>
+                            </div>
+                        </div>
+                        <div class="block-container column-2">
+                            <div class="cart-block">
+                                <form name="addToCartForm" id="add_cart_<%= associatedProduct.id %>" action="" method="POST">
+                                    <input type="hidden" name="product_parent" value="<%= productsData.parent_product.id %>" />
+                                    <input type="hidden" name="product_associated" value="<%= associatedProduct.id %>" />
+                                    <button type="button" class="action tocart primary afbt">
+                                        Add to Cart
+                                    </button>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <% }); %>
+        </div>
+    </div>
+<% } %>
