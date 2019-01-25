@@ -1,4 +1,4 @@
-# magento2-fbt (Team - JBash)
+# Frequently Bought Together and Intelligent Related Products for Magento 2
 
 This repository contains modules for "Magento 2 Frequently Bought Together" and "Magento 2 Intelligent Related Products Using JNearestNeighbours Algorithm".
 
